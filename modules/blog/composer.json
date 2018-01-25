@@ -1,0 +1,20 @@
+{
+    "name": "modules/Blog",
+    "description": "This is Blog module",
+    "license": "MIT",
+    "authors": [
+        {
+            
+			
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Modules\\Blog": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "Illuminate/support": "~5"
+    }
+}
