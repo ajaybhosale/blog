@@ -31,18 +31,18 @@ $api->version('v1', function ($api) {
         $api->put('/users/{id}', ['uses' => 'UsersController@updateUser',]);
     });
     $api->group(['prefix' => 'posts', 'namespace' => 'Modules\Blog\Controllers'], function() use ($api) {
-        $api->get('/', ['uses' => 'PostsController@getPosts',]);
-        $api->get('{id}', ['uses' => 'PostsController@getPost',]);
-        $api->post('/', ['uses' => 'PostsController@createPost',]);
-        $api->delete('{id}', ['uses' => 'PostsController@deletePost',]);
-        $api->put('{id}', ['uses' => 'PostsController@updatePost',]);
+        $api->get('/posts', ['uses' => 'PostsController@getPosts',]);
+        $api->get('/posts/{id}', ['uses' => 'PostsController@getPost',]);
+        $api->post('/posts', ['uses' => 'PostsController@createPost',]);
+        $api->delete('/posts/{id}', ['uses' => 'PostsController@deletePost',]);
+        $api->put('/posts/{id}', ['uses' => 'PostsController@updatePost',]);
     });
     $api->group(['prefix' => 'comments', 'namespace' => 'Modules\Blog\Controllers'], function() use ($api) {
-        $api->get('/', ['uses' => 'CommentsController@getComments',]);
-        $api->get('{id}', ['uses' => 'CommentsController@getComment',]);
-        $api->post('/', ['uses' => 'CommentsController@createComment',]);
-        $api->delete('{id}', ['uses' => 'CommentsController@deleteComment',]);
-        $api->put('{id}', ['uses' => 'CommentsController@updateComment',]);
+        $api->get('/comments', ['uses' => 'CommentsController@getComments',]);
+        $api->get('/comments/{id}', ['uses' => 'CommentsController@getComment',]);
+        $api->post('/comments/', ['uses' => 'CommentsController@createComment',]);
+        $api->delete('/comments/{id}', ['uses' => 'CommentsController@deleteComment',]);
+        $api->put('/comments/{id}', ['uses' => 'CommentsController@updateComment',]);
     });
 });
 

@@ -19,7 +19,6 @@ class PostsController extends Controller
 
     public function getPosts()
     {
-        dd('in post');
         $posts = $this->posts->getPosts();
         if ($posts) {
             return Response::json($posts);
